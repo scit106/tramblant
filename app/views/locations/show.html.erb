@@ -3,3 +3,10 @@
 <% @location.users.each do |user| %>
 	<p><%= link_to "#{user.first_name}", user_path(user) %></p>
 <% end %>
+<% @location.groups.each do |group| %>
+	<p> Group with
+	<% group.user.each do |user| %>
+		<%= user.first_name %> 
+	<% end %>
+	</p>
+<% end %>

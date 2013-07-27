@@ -6,7 +6,11 @@ resources :users
 
 # match 'users/:id' => 'users#show'
 
-resources :locations
+resources :locations do
+  resources :groups
+end
+
+resources :skills
 
 root :to => 'locations#index'
 
