@@ -2,9 +2,11 @@ Tramblant::Application.routes.draw do
 
   devise_for :users
 
+match 'users/:id' => 'users#show'
+
 resources :locations
 
-
+root :to => 'locations#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
