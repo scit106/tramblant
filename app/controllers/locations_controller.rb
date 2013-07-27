@@ -9,7 +9,12 @@ class LocationsController < ApplicationController
 	def show
 		@location = Location.find(params[:id])
 		# user.location = @location.id
+		# @user = current_user
+		# @user.location = location
+		# @user.save
 
 	end
+
+	
 
 end
