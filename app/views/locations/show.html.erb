@@ -1,7 +1,7 @@
 <h1>Welcome to <%= @location.name %></h1>
 
 <% @location.users.each do |user| %>
-	<p><%= link_to "#{user.first_name}", user_path(user) %></p>
+	<p><%= link_to "#{user.first_name}", location_user_path(@location, user) %></p>
 <% end %>
 <% @location.groups.each do |group| %>
 	<p> Group with

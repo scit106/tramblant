@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
 	def show
-		@user = User.find(params[:id])
+		@user = @location.users.find(params[:id])
+		if @user.group && @user.location == @user.group.location
+			@group = @user.group
+		else @group = Group.new
+		end
 	end
 
 	def update

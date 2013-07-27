@@ -2,12 +2,13 @@ Tramblant::Application.routes.draw do
 
   devise_for :users
 
-resources :users 
+ 
 
 # match 'users/:id' => 'users#show'
 
 resources :locations do
   resources :groups
+  resources :users
 end
 
 resources :skills

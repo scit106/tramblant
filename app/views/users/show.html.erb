@@ -7,9 +7,9 @@
 <p>Skill Level: </p>
 <div>
 	<% if @user != current_user %>
-	<%= form_for [@location, @group], :html => {:multipart => true} do |f| %>
-		<%= f.hidden_field :location_id, :value => params[:location_id] %>
+	<%= form_for @group, :action => "create", :controller => "GroupsController", :html => {:multipart => true} do |f| %>
+		<%= f.hidden_field :location_id, :value => @user.location.id %>
 		<%= f.submit "Join" %>
-	<%= link_to "Join", create_location_group_path(@user.location_id) %>
+		<% end %>
 	<% end %>
 </div>
