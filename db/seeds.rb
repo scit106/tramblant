@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+  Location.delete_all
+
+  locations = Location.create([
+  	{ name: 'Tremblant' }, 
+  	{ name: 'Vail' }, 
+  	{ name: 'Breckenridge' },
+  	{ name: 'Aspen' },
+  	{ name: 'Killington' },
+  	{ name: 'Sugarbush' },
+  	{ name: 'Mad River Glen' },
+  	{ name: 'Heavenly' },
+  	{ name: 'Park City' },
+  	])

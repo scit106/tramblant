@@ -1,2 +1,8 @@
 <h1>Welcome to Skillevel</h1>
 <h3>Please Select Your Location</h3>
+
+<% @locations.each do |location| %>
+
+<p><%= link_to "#{location.name}", location_path(location) %></p>
+
+<% end %>
