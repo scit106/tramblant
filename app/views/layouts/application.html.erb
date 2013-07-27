@@ -14,6 +14,9 @@
     		<li><%= link_to 'Home', locations_path %></li>
     	</ul>
     	<ul class="nav pull-right">
+    	  <% if @location %>
+    	  	<li><%= link_to "#{@location.name}", locations_path %></li>
+    	  <% end %>
 	      <% if user_signed_in? %>
 			  <li>
 			  	<%= link_to "Welcome, #{current_user.first_name}", locations_path %>

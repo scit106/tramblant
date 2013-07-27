@@ -8,6 +8,8 @@ class LocationsController < ApplicationController
 
 	def show
 		@location = Location.find(params[:id])
+		# user.location = @location.id
+
 	end
 
 end
