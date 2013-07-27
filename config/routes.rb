@@ -2,7 +2,9 @@ Tramblant::Application.routes.draw do
 
   devise_for :users
 
-match 'users/:id' => 'users#show'
+resources :users
+
+# match 'users/:id' => 'users#show'
 
 resources :locations
 

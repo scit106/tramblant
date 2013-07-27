@@ -1,5 +1,5 @@
 <h1>Welcome to <%= @location.name %></h1>
 
 <% @location.users.each do |user| %>
-	<p><%= user.first_name %></p>
+	<p><%= link_to "#{user.first_name}", user_path(user) %></p>
 <% end %>
