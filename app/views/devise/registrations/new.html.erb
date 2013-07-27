@@ -15,6 +15,9 @@
   <div><%= f.label :location %><br />
      <%= f.collection_select :location_id, Location.order(:name),:id,:name, include_blank: true %></div>
 
+  <div><p>Upload A Profile Picture </p>
+  <%= f.file_field :userpic %></div>
+
   <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
