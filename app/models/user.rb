@@ -12,6 +12,10 @@ class User < ActiveRecord::Base
 
   belongs_to :location
 
+  belongs_to :group
+
+  belongs_to :skill
+
   mount_uploader :userpic, UserpicUploader
 
 end

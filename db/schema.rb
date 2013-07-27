@@ -11,12 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130727150413) do
+ActiveRecord::Schema.define(:version => 20130727163902) do
+
+  create_table "groups", :force => true do |t|
+    t.integer  "location_id"
+    t.integer  "skill_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "locations", :force => true do |t|
     t.string   "name"
     t.float    "latitude"
     t.float    "longitude"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "skills", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

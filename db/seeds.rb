@@ -20,3 +20,12 @@
   	{ name: 'Heavenly' },
   	{ name: 'Park City' },
   	])
+
+  Skill.delete_all
+
+  skills = Skill.create([
+    { name: 'Beginner' },
+    { name: 'Intermediate' },
+    { name: 'Advanced' },
+    { name: 'Expert' }
+    ])
