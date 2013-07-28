@@ -1,0 +1,16 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 0px 15px;
+  text-align: center;
+}
+.regular-padding {
+  margin: 15px 0px 15px 0px;
+}
+
+.btn-default-dark {
+  color: #ffffff;
+  background-color: #00000F;
+  border-color: #474949;
+}
