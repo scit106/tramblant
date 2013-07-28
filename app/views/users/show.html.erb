@@ -4,6 +4,6 @@
 <p>Name: <%= "#{@user.first_name} #{@user.last_name}" %> </p>
 <p>Phone: <%= @user.phone %> </p>
 <p>Current Location: <%= @user.location.name %></p>
-<p>Skill Level: <% @user.skill do |level| %><%= level.name %><% end %></p>
+<p>Skill Level: <%= @user.skill.name %></p>
 
 
