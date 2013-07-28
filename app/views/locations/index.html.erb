@@ -5,10 +5,10 @@
 
 	<div class="media">
     	<a class="pull-left" href="<%= location_path(location) %>">
-    		<%= image_tag(location.image, :class => "media-object") %>
+    		<%= image_tag(location.image, :class => "media-object", :size => "100x100") %>
         </a>
          <div class="media-body">
-            <h4 class="media-heading" align="left"><%= link_to "#{location.name}", location_path(location) %></h4>
+            <h4 class="media-heading" align="left"><%= link_to "#{location.name}", setlocation_path(location) %></h4>
             <h5 align="left"><%= "#{location.name}" %></h4>
           </div>
     </div> 

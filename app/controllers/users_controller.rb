@@ -7,9 +7,18 @@ class UsersController < ApplicationController
 		# end
 	end
 
-	def update
+	def set_location 
 		@user = current_user
+		@user.location_id = params[:location_id]
 		@user.save
+		redirect_to location_path(@user.location_id)
+	end
+
+	def set_skill
+		@user = current_user
+		@user.skill_id = params[:skill_id]
+		@user.save
+		redirect_to location_path(@user.location_id)
 	end
 
 	# def set_location location

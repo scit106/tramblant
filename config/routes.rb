@@ -11,7 +11,7 @@ resources :locations do
   resources :users
 end
 
-match 'users/modify'
+get 'setlocation/:location_id' => 'users#set_location', as: 'setlocation'
 
 resources :skills
 

@@ -1,5 +1,5 @@
 class Location < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :image
 
   has_many :users
   has_many :groups
