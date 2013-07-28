@@ -18,7 +18,11 @@ class UsersController < ApplicationController
 		@user = current_user
 		@user.skill_id = params[:skill_id]
 		@user.save
-		redirect_to location_path(@user.location_id)
+		if @user.location_id
+			redirect_to location_path(@user.location_id)
+		else
+			redirect_to locations_path
+		end
 	end
 
 	# def set_location location
