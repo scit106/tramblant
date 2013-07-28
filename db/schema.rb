@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130727193458) do
+ActiveRecord::Schema.define(:version => 20130728015018) do
 
   create_table "groups", :force => true do |t|
     t.integer  "location_id"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20130727193458) do
     t.integer  "location_id"
     t.string   "userpic"
     t.integer  "group_id"
+    t.integer  "skill_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

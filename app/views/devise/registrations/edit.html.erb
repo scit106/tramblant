@@ -6,6 +6,9 @@
   <div><%= f.label :location %><br />
   <%= f.collection_select :location_id, Location.order(:name),:id,:name, include_blank: true %></div>
 
+  <div><%= f.label :skill %><br />
+  <%= f.collection_select :skill_id, Skill.order(:id),:id,:name, include_blank: true %></div>
+
   <div><p>Upload A Profile Picture </p>
   <%= f.file_field :userpic %></div>
 
