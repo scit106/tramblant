@@ -1,6 +1,36 @@
-<h1>Welcome to <%= @location.name %></h1>
+
+<div class="container">
+
+      <div class="starter-template">
+      	<h3>Welcome to <%= @location.name %></h3>
+        <div class="panel regular-padding">
+          <h4>Select your Skillevel</h4>
+          <!--slider -->
+            <div class="btn-group btn-group-justified">
+              <a href="#" class="btn btn-success">Beginner</a>
+              <a href="#" class="btn btn-info">Intermediate</a>
+              <a href="#" class="btn btn-default">Advanced</a>
+              <a href="#" class="btn btn-default-dark">Expert</a>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title" align="left">Find people!</h3>
+          </div>
 
 <% @location.users.each do |user| %>
-	<p><%= link_to "#{user.first_name}", location_user_path(@location, user) %></p>
+	<div class="media">
+        <a class="pull-left" href="<%= location_user_path(@location, user) %>">
+            <%= image_tag(user.userpic, :class => "media-object", :size => "100x100" )if user.userpic? %>
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading" align="left"><%= link_to "#{user.first_name}", location_user_path(@location, user) %></h4>
+            <% if user.skill %>
+            <h5 align="left"><%= user.skill.name %></h4>
+            <% end %>
+        </div>
+    </div>  
+
 <% end %>
 
