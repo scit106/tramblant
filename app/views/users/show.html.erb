@@ -1,9 +1,29 @@
-<h1>User Information</h1>
 
-<p><%= image_tag(@user.userpic) if @user.userpic? %></p>
-<p>Name: <%= "#{@user.first_name} #{@user.last_name}" %> </p>
-<p>Phone: <%= @user.phone %> </p>
-<p>Current Location: <%= @user.location.name %></p>
-<p>Skill Level: <%= @user.skill.name %></p>
+<div class="container">
+      <div class="starter-template">
+        <div class="panel regular-padding">
+          <%= image_tag(@user.userpic, :class => "img-thumbnail" )if @user.userpic? %>
+          <h3><%= "#{@user.first_name} #{@user.last_name}" %></h3>
+          <p><strong><%= @user.skill.name if @user.skill %></strong></p>
+          <p><strong><%= @user.location.name if @user.skill %></strong></p>
+          <!-- Need to create this field! -->
+          <p>Hi my name is <%= "#{@user.first_name}" %> and I like skiing...</p>
+          <p><strong><%= @user.skill.name if @user.skill %></strong></p>
+        </div>
+        
+        <div class="regular-padding">
+          <a href="#" class="btn btn-primary btn-large btn-block">Join <%= "#{@user.first_name}" %>!</a>
+        </div>
+
+        <div class="btn-group btn-group-justified">
+            <a href="sms:<%= @user.phone %>*[?body=<message_body>]" class="btn btn-info">SMS</a>
+            <a href="tel:<%= @user.phone %>" class="btn btn-success">Call</a>
+            <a href="#" class="btn btn-warning">Locate</a>
+        </div>
+        <br>
+
+      </div>
+    </div>
+
 
 
