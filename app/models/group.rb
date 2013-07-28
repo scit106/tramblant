@@ -4,4 +4,6 @@ class Group < ActiveRecord::Base
   belongs_to :location
   belongs_to :skill
 
+  accepts_nested_attributes_for :users
+
 end

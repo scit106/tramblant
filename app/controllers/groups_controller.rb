@@ -7,7 +7,7 @@ class GroupsController < ApplicationController
 
 	def create
 		@location = Location.find(params[:id])
-		@group = @location.groups.new
+		@group = Group.new
 		@group.save
 		redirect_to location_path(location)
 	end
