@@ -22,8 +22,11 @@
     	  	<% end %>
 	      	<% if user_signed_in? %>
 			  <li>
-			  	<%= link_to "Welcome, #{current_user.first_name}", edit_user_registration_path %>
+			  	<a href="#">Welcome, <%= "#{current_user.first_name}" %> </a>
 			  </li>
+        <li>
+          <%= link_to "Edit Profile", edit_user_registration_path %>
+        </li>
 			  <li>
 			  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
 			  </li>
