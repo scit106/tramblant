@@ -3,8 +3,14 @@
 
 <% @locations.each do |location| %>
 
-<p><%= link_to "#{location.name}", location_path(location) %></p>
-
-
+	<div class="media">
+    	<a class="pull-left" href="<%= location_path(location) %>">
+    		<%= image_tag(location.image, :class => "media-object") %>
+        </a>
+         <div class="media-body">
+            <h4 class="media-heading" align="left"><%= link_to "#{location.name}", location_path(location) %></h4>
+            <h5 align="left"><%= "#{location.name}" %></h4>
+          </div>
+    </div> 
 
 <% end %>

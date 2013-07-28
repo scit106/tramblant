@@ -11,6 +11,8 @@ resources :locations do
   resources :users
 end
 
+match 'users/modify'
+
 resources :skills
 
 root :to => 'locations#index'
