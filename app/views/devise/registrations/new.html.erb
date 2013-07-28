@@ -1,36 +1,36 @@
-<h2>Sign up</h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div class="panel">
+  <br>
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+          <fieldset>
+            <legend>Sign up for Skillevel</legend>
+            <div class="form-group">
+              <%= f.label :first_name %><br />
+              <%= f.text_field :first_name, :class => "form-control", :placeholder => "Enter First Name" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :last_name %><br />
+              <%= f.text_field :last_name, :class => "form-control", :placeholder => "Enter Last Name" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, :autofocus => true, :class => "form-control", :placeholder => "Enter Email" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, :class => "form-control", :placeholder => "Password" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, :class => "form-control", :placeholder => "Re-Type Password" %>
+            </div>
+            <div><%= f.submit "Sign up", :class => "btn btn-primary" %></div>
+          </fieldset>
+      <% end %>
+      <br />
+      <%= render "devise/shared/links" %>
+</div>
 
-  <div><%= f.label :first_name %><br />
-  	<%= f.text_field :first_name %></div>
 
-  	<div><%= f.label :last_name %><br />
-  	<%= f.text_field :last_name %></div>
 
-  	<div><%= f.label :phone %><br />
-  	<%= f.text_field :phone %></div>
-
-  <div><%= f.label :location %><br />
-     <%= f.collection_select :location_id, Location.order(:name),:id,:name, include_blank: true %></div>
-
-  <div><%= f.label :skill %><br />
-     <%= f.collection_select :skill_id, Skill.order(:id),:id,:name, include_blank: true %></div>
-
-  <div><p>Upload A Profile Picture </p>
-  <%= f.file_field :userpic %></div>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>
